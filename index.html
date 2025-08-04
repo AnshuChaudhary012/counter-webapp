@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Counter App</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      margin-top: 100px;
+    }
+    h1 {
+      margin-bottom: 20px;
+    }
+    .btn {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin: 10px;
+      cursor: pointer;
+    }
+    #count {
+      font-size: 24px;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Counter App</h1>
+  <div id="count">0</div>
+  <button class="btn" onclick="increment()">Increment</button>
+  <button class="btn" onclick="decrement()">Decrement</button>
+  <button class="btn" onclick="reset()">Reset</button>
+
+  <script>
+    let count = ;
+    const countElement = document.getElementById('count');
+
+    function updateDisplay() {
+      countElement.textContent = count;
+    }
+    updateDisplay();
+
+    function increment() {
+      count++;
+      updateDisplay();
+    }
+
+    function decrement() {
+      count--;
+      updateDisplay();
+    }
+
+    function reset() {
+      count = 0;
+      updateDisplay();
+    }
+  </script>
+</body>
+</html>
